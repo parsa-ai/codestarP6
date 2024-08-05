@@ -1,0 +1,48 @@
+<div class=" w-full mt-5 bg-slate-50 shadow-md rounded-lg overflow-hidden p-4">
+    <form (ngSubmit)="onSubmit()" class="w-full" #bookForm="ngForm">
+        <div class="mb-4 flex flex-col gap-2 ">
+            <div class="flex gap-2 ">
+                <label class="block w-full text-slate-700 text-sm font-bold mb-2">Name</label>
+                <label class="block w-full text-slate-700 text-sm font-bold mb-2">Image URL</label>
+            </div>
+            <div class=" gap-2 flex">
+                <input
+                    class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" [(ngModel)]="book.name" name="name" required>
+
+                <input
+                    class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" [(ngModel)]="book.image" name="image" required>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-slate-700 text-sm font-bold mb-2">Genres</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text" [(ngModel)]="book.genre" name="genre" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-slate-700 text-sm font-bold mb-2">Author</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text" [(ngModel)]="book.author" name="author" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-slate-700 text-sm font-bold mb-2">Publish Date</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="date" [(ngModel)]="book.publishDate" name="publishDate" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-slate-700 text-sm font-bold mb-2">Price</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="number" [(ngModel)]="book.price" name="price" required>
+        </div>
+        <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+            Add Book
+        </button>
+    </form>
+</div>

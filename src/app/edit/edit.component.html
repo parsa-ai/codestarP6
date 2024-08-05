@@ -1,0 +1,32 @@
+<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white p-4 rounded-lg w-1/2">
+      <h2 class="text-xl font-bold mb-2">Edit Book</h2>
+      <form (ngSubmit)="onSubmit()">
+        <label class="block mb-2">
+          Name:
+          <input [(ngModel)]="book.name" name="name" class="border p-1 rounded w-full" required>
+        </label>
+        <label class="block mb-2">
+          Author:
+          <input [(ngModel)]="book.author" name="author" class="border p-1 rounded w-full" required>
+        </label>
+        <label class="block mb-2">
+          Genres:
+          <input [(ngModel)]="book.genre" name="genre" class="border p-1 rounded w-full" required>
+        </label>
+        <label class="block mb-2">
+          Published Date:
+          <input [(ngModel)]="book.publishDate" name="publishDate" type="date" class="border p-1 rounded w-full" required>
+        </label>
+        <label class="block mb-2">
+          Price:
+          <input [(ngModel)]="book.price" name="price" type="number" class="border p-1 rounded w-full" required>
+        </label>
+        <div class="flex justify-end">
+          <button type="button" (click)="close()" class="mr-2 bg-gray-600 text-white p-2 rounded">Cancel</button>
+          <button type="submit" class="bg-blue-600 text-white p-2 rounded">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
